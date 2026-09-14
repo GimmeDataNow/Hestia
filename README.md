@@ -19,6 +19,9 @@ This configuration offers several methods to run services.
 
 Docker is available on nixos. The installation of Portainer is recommended.
 
+> [!WARNING]
+> Make sure to open the proper ports in the nix config. If you forget to do so then the service will remain inaccessible.
+
 ### compose2nix (docker to nix) (medium)
 
 It is possible to convert a docker compose config into a nix flake which can then be natively imported into nix.
