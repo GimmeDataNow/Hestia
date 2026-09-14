@@ -1,0 +1,2 @@
+# Hestia
+Home server configuration.
