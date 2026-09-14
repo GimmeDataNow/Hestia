@@ -17,7 +17,7 @@
   outputs = { self, nixpkgs, unstable, ... }@inputs: 
   let
     inherit (self) outputs;
-    user = "hallow";
+    user = "hestia";
     
     # Helper function
     mkSystem = { host, system ? "x86_64-linux" }: nixpkgs.lib.nixosSystem {

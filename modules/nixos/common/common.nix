@@ -36,7 +36,7 @@
   users.users.${user} = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
-    hashedPassword = "$y$j9T$.1SJTv4b5xb74jNuW5Jos0$saRV3GfwAEGo1M70hUmoQsPs2TIl.klI09rJYD2bl18";
+    hashedPassword = "$y$j9T$NzVZTue5TslKbHbnt6Afo.$lEuCloXCQN3PzTElMaAyz8b94PYVhIHpMa/AKi9177C";
   };
 
   environment.systemPackages = with pkgs; [
