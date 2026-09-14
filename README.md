@@ -70,5 +70,23 @@ To remotely rebuild and/or update the machine run this command.
     --build-host hestia@192.168.0.13 \
     --sudo \
     --ask-sudo-password
-```nix
+```
+
+# TODO
+
+Set up tailscale account
+
+Enable tailscale on the minipc
+
+Verify the tailscale status on the minipc
+
+Try remote access via tailscale
+
+Enable the vaultwarden module
+
+Login to the vaultwarden website
+
+Login into the private bitwarden/vaultwarden instance via the app
+
+Enable and test more services
 
