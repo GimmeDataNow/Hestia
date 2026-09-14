@@ -1,0 +1,30 @@
+# nix run github:aksiksi/compose2nix -- \
+# -inputs=docker-compose.yml \
+# -output=compose.nix \
+# -include_env_files=false \
+# -check_bind_mounts=true \
+# -use_upheld_by=true \
+# -runtime=docker \
+# -project=mealie \
+# -root_path=/home/hallow/containers/mealie
+services:
+  mealie:
+    image: ghcr.io/mealie-recipes/mealie:latest
+    container_name: mealie
+    restart: unless-stopped
+    ports:
+      - 9925:9000
+    deploy:
+      resources:
+        limits:
+          memory: 1000M
+    volumes:
+      - ./data:/app/data/
+    environment:
+      # Use your specific timezone (e.g., America/New_York)
+      - TZ=Europe/Berlin
+      # Set this to your server's IP or domain
+      - BASE_URL=http://192.168.1.100:9925
+      - ALLOW_SIGNUP=true
+      - PUID=1000
+      - PGID=1000

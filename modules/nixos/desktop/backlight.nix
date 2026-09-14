@@ -1,0 +1,5 @@
+{ ... }: {
+  services.clight = {
+    enable = true;
+  };
+}
