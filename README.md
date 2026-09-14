@@ -54,7 +54,7 @@ To get the hardware config for a specific configuration run this command.
   nix run github:nix-community/nixos-anywhere -- \
     --flake .#hestia \
     --generate-hardware-config nixos-generate-config ./hardware-configuration.nix \
-    root@31.56.233.116
+    hestia@192.168.0.13
 ```
 ### Remote Rebuild
 
@@ -63,8 +63,8 @@ To remotely rebuild and/or update the machine run this command.
 ```nix
   nixos-rebuild switch \
     --flake .#hestia \
-    --target-host hallow@31.56.233.116 \
-    --build-host hallow@31.56.233.116 \
+    --target-host hestia@192.168.0.13 \
+    --build-host hestia@192.168.0.13 \
     --sudo \
     --ask-sudo-password
 ```nix
